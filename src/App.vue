@@ -172,7 +172,7 @@ const getWindowClass = (windowItem: WindowItem) => {
             <h1>Gabriel Smolski</h1>
             <h4>Frontend Developer</h4>
           </div>
-          <Window v-for="windowItem in windowsList" :windowParams="windowItem" class="position-absolute"
+          <Window v-for="windowItem in windowsList" :key="windowItem.id" :windowParams="windowItem" class="position-absolute"
             :class="getWindowClass(windowItem)" @mousedown="onWindowClick(windowItem.id)" :openWindow="openNewWindow" />
 
           <Window class="position-absolute" :windowParams="personalInfo" :class="getWindowClass(personalInfo)"
@@ -222,7 +222,6 @@ const getWindowClass = (windowItem: WindowItem) => {
   top: 350px;
   left: -40px;
   min-width: 450px;
-  min-height: 385px;
 }
 
 .index-1 {
@@ -249,7 +248,7 @@ const getWindowClass = (windowItem: WindowItem) => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1320px;
   height: 100%;
   padding: 0 20px;
 }

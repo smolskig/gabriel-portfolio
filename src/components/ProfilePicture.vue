@@ -4,7 +4,7 @@
 <template>
     <div class="profile-container">
         <img src="../assets/profile.jpg" alt="profile-picture">
-        <button class="download-cv-btn">Download CV</button>
+        <!-- <button class="download-cv-btn">Download CV</button> -->
     </div>
 </template>
 

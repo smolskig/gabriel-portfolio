@@ -42,7 +42,7 @@ const iconsMap: any = {
 
         <div class="content">
             <ul v-if="windowParams.contentType == 'list'" class="list-content">
-                <li v-for="listItem in windowParams.content" @click="openItem(listItem)">
+                <li v-for="listItem in windowParams.content" :key="listItem.id" @click="openItem(listItem)">
                     <img :src="iconsMap[listItem.contentType]" alt="list-item-icon">
                     {{ listItem.title }}
                 </li>
@@ -50,7 +50,7 @@ const iconsMap: any = {
 
             <div v-if="windowParams.contentType == 'grid'">
                 <div class="grid-container">
-                    <div v-for="item in windowParams.content" class="grid-item" @click="openItem(item)">
+                    <div v-for="item in windowParams.content" :key="item.id" class="grid-item" @click="openItem(item)">
                         <img :src="iconsMap[item.contentType] || iconsMap[windowParams.contentType]"
                             alt="grid-item-icon" />
                         <span>{{ item.title }}</span>
@@ -214,6 +214,6 @@ const iconsMap: any = {
     left:20px;
     right: 20px;
     height: 100%;
-    margin-top: -15px;
+    margin-top: -18px;
 }
 </style>

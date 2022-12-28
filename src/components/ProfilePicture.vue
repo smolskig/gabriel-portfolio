@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import profilePìcture from "@/assets/profile.jpg"
 </script>
 
 <template>
     <div class="profile-container">
-        <img src="@/assets/profile.jpg" alt="profile-picture">
+        <img :src="profilePìcture" alt="profile-picture">
         <!-- <button class="download-cv-btn">Download CV</button> -->
     </div>
 </template>
